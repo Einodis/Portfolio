@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mon Panier</title>
+  <link rel="stylesheet" href="projet.css">
+
+  <!-- Fin barre nav-->
+</head>
+
+<body>
+  <header>
+    <!-- Barre nav-->
+    <nav>
+      <h1>𝓗𝓪𝓽𝓼𝓾</h1>
+      <div class="onglets">
+        <p class="liens">Tee-shirts</p>
+        <p class="liens">Qui sommes-nous</p>
+        <p class="liens">Contacts</p>
+        <form>
+          <input type="search" placeholder="Rechercher">
+        </form>
+        <!--icon cart -->
+        <p> <img src="images/cart.png" alt="Panier" height="20px" width="20px"></p>
+        <!---->
+      </div>
+    </nav>
+  </header>
+
+  <section>
+
+    <div class="cart-container">
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="images/teeshirt_1.png" alt="Image 1">
+          <button class="addToCartButton" onclick="addToCart('Produit 1', '34', 'images/teeshirt_1.png')">🛒</button>
+        </div>
+        <div class="slide">
+          <img src="images/teeshirt_2.png" alt="Image 2">
+          <button class="addToCartButton" onclick="addToCart('Produit 2', '39', 'images/teeshirt_2.png')">🛒</button>
+        </div>
+        <div class="slide">
+          <img src="images/teeshirt_3.png" alt="Image 3">
+          <button class="addToCartButton" onclick="addToCart('Produit 3', '29', 'images/teeshirt_3.png')">🛒</button>
+        </div>
+      </div>
+      <!-- Ajouter d'autres slides ici selon vos besoins -->
+      <h1>Mon Panier</h1>
+
+      <div id="cart-items">
+        <!-- Contenu du panier généré dynamiquement -->
+      </div>
+
+      <div class="cart-total">
+        <label>Total: <span id="cart-total">0</span> EUR</label>
+        <div class="checkoutButton"><button class="checkout-button" onclick="showPopup()">Passer à la caisse</button>
+        </div>
+      </div>
+
+      <div id="popup" class="popup">
+        <div class="popup-content">
+          <p>Veuillez procéder au paiement</p>
+          <button onclick="hidePopup()">Fermer</button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>Tous les droits sont réservés © 2023 Tea shirts.</footer>
+  <script src="projet.js"></script>
+</body>
+
+
+</html>
